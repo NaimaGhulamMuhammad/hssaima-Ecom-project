@@ -36,7 +36,7 @@ const Topbar = () => {
                     <ul className="customer-links list-inline">
                         <li><Link to="/login">Login</Link></li>
                         <li><Link to="/createAccount">Create Account</Link></li>
-                        <li><a href="wishlist.html">Wishlist</a></li>
+                        <li><Link to="/wishlist">Wishlist</Link></li>
                     </ul>
                 </div>
             </div>

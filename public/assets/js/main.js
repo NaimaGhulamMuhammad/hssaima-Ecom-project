@@ -87,6 +87,7 @@
 		$("#currencies li").on("click", function() {
 			$(this).parent().slideUp();
 		});
+    console.log("cuurency working")
 	}
 	currency_dropdown();
 	
@@ -123,6 +124,8 @@
 		$(".site-header__cart").on("click", function(i) {
 			i.preventDefault();
 			$("#header-cart").slideToggle();
+      console.log("cart")
+
 		});
 		// Hide Cart on document click
 		$("body").on("click", function(event ) {

@@ -1,7 +1,7 @@
 import React from "react"
 import {Link} from "react-router-dom"
 
-const CartComponent = ({productImg, productName, size, color, price, total}) => {
+const CartCard = ({productImg, productName, size, color, price, total}) => {
     return (
         <>
             <tr className="cart__row border-bottom line1 cart-flex border-top">
@@ -42,4 +42,4 @@ const CartComponent = ({productImg, productName, size, color, price, total}) => 
         </>
     );
 }
-export default CartComponent;
+export default CartCard;

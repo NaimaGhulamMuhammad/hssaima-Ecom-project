@@ -3,7 +3,8 @@ import Routes from "../Routes"
 import SearchForm from "../components/SearchForm"
 import Topbar from "../components/Topbar"
 import Header from "../components/header"
-import MobileMenu from "../components/MobileMenu"
+import MobileMenu from "../components/header/MobileMenu"
+import Footer from "../sections/Footer"
 function Pages() {
   return (
     <>
@@ -14,6 +15,7 @@ function Pages() {
     <div id="page-content">
     <Routes />
     </div>
+    <Footer />
     </>
   );
 }

@@ -1,6 +1,6 @@
 
 import img1 from "../images/credit-card.png"
-import img2 from "../images/shield.png""
+import img2 from "../images/shield.png"
 import img3 from "../images/worldwide.png"
 import img4 from "../images/phone-call.png"
 
@@ -25,7 +25,7 @@ const ProductFeatureData = [
          img: img4 ,
         title: "Hotline",
         details: "Talk to help line for your question on 4141 456 789, 4125 666 888",
-    },
+    }
 
 ]
-export ProductFeatureData
+export default ProductFeatureData;

@@ -1,19 +1,21 @@
 import React from "react";
+import ReactStars from "react-rating-stars-component";
 
-const RelatedProductSlider = ({img,labelonsale,label,productname,oldprice,newprice}) => {
+const RelatedProductSlider = ({img,hoverImg,labelonSale,label,productname,oldprice,newprice,swatch,starRate}) => {
+
   return (
     <div className="col-12 item">
        
         <div className="product-image">
           
-          <a href="#">
+        <a href="#">
            
             <img className="primary blur-up lazyload" data-src={img}src={img} alt="image" title="product" />
             {/* End image */}
             {/* Hover image */}
-            <img className="hover blur-up lazyload" data-src={img} src={img} alt="image" title="product" />
+            <img className="hover blur-up lazyload" data-src={hoverImg} src={hoverImg} alt="image" title="product" />
           
-            <div className="product-labels rectangular"><span className="lbl on-sale">{labelonsale}%</span> <span className="lbl pr-label1">{label}</span></div>
+            <div className="product-labels rectangular">{labelonSale ? <span className="lbl on-sale">{labelonSale}</span>:<span></span>}  {label?<span className="lbl pr-label1">{label}</span>:<span></span>}</div>
          
           </a>
         
@@ -39,31 +41,32 @@ const RelatedProductSlider = ({img,labelonsale,label,productname,oldprice,newpri
             <a href="#">{productname}</a>
           </div>
           
+          
           <div className="product-price">
-            <span className="old-price">${oldprice}</span>
-            <span className="price">${newprice}</span>
+          {oldprice? <span className="old-price">${oldprice}</span>:<span></span>}
+          {newprice? <span className="price">${newprice}</span>:<span></span>}
           </div>
-       
-          <div className="product-review">
-            <i className="font-13 fa fa-star" />
-            <i className="font-13 fa fa-star" />
-            <i className="font-13 fa fa-star" />
-            <i className="font-13 fa fa-star-o" />
-            <i className="font-13 fa fa-star-o" />
+    
+          <div className="product-review" style={{width:"30%",
+    margin:"0 auto"}}>
+            <ReactStars
+    count={5}
+    size={15}
+    isHalf={true}
+    value={starRate}
+    edit={false}
+    emptyIcon={<i className="font-13 fa fa-star-o"></i>}
+    fullIcon={<i className="font-13 fa fa-star"></i>}
+    activeColor="#ff9500"
+
+  />
           </div>
-          {/* Variant */}
-          <ul className="swatches">
-            <li className="swatch medium rounded"><img src="assets/images/product-images/variant1.jpg" alt="image" /></li>
-            <li className="swatch medium rounded"><img src="assets/images/product-images/variant2.jpg" alt="image" /></li>
-            <li className="swatch medium rounded"><img src="assets/images/product-images/variant3.jpg" alt="image" /></li>
-            <li className="swatch medium rounded"><img src="assets/images/product-images/variant4.jpg" alt="image" /></li>
-            <li className="swatch medium rounded"><img src="assets/images/product-images/variant5.jpg" alt="image" /></li>
-            <li className="swatch medium rounded"><img src="assets/images/product-images/variant6.jpg" alt="image" /></li>
-          </ul>
-          {/* End Variant */}
+           <ul class="swatches">
+            {swatch?  <li className="swatch medium rounded"><img src={swatch}alt="image" /></li>:<span></span>}
+              </ul>
         </div>
-        {/* End product details */}
       </div>
+      
   )
 }
 

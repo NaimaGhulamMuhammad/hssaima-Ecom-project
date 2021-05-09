@@ -54,7 +54,7 @@
 
 (function ($) {
 	// Start of use strict
-	'use strict';
+	// 'use strict';
 	
     /*-----------------------------------------
 	  1. Preloader Loading ----------------------- 
@@ -68,20 +68,20 @@
 	/*-----------------------------------------
 	 2. Promotional Bar Header ------------------
 	  -----------------------------------------*/
-	function promotional_bar(){
-		$(".closeHeader").on('click',function() {
-			$(".promotion-header").slideUp();  
-			Cookies.set('promotion', 'true', { expires: 1});  
-			return false;
-		});
-	}
-	promotional_bar();
+	// function promotional_bar(){
+	// 	$(".closeHeader").on('click',function() {
+	// 		$(".promotion-header").slideUp();  
+	// 		Cookies.set('promotion', 'true', { expires: 1});  
+	// 		return false;
+	// 	});
+	// }
+	// promotional_bar();
 	
 	/*-----------------------------------------
 	 3. Currency Show/Hide dropdown -----------
 	  -----------------------------------------*/
 	function currency_dropdown(){
-		$(".selected-currency").on("click", function() {
+		window.$(".selected-currency").on("click", function() {
 		  $("#currencies").slideToggle();      
 		});
 		$("#currencies li").on("click", function() {

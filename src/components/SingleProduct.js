@@ -9,49 +9,17 @@ import img7 from "../images/product-detail-page/camelia-reversible-big7.jpg"
 import img8 from "../images/product-detail-page/camelia-reversible-big8.jpg"
 import img9 from "../images/product-detail-page/camelia-reversible-big9.jpg"
 import img10 from "../images/product-detail-page/camelia-reversible-big10.jpg"
-
+import ProductLeftSlider from "./ProductLeftSlider"
 const Singleproduct = () => {
   return (
-      <div className="product-single">
+     <div className="product-single">
         <div className="row">
           <div className="col-lg-6 col-md-6 col-sm-12 col-12">
             <div className="product-details-img">
               <div className="product-thumb">
-                <div id="gallery" className="product-dec-slider-2 product-tab-left">
-                  <a data-image={img1} data-zoom-image={img1} className="slick-slide slick-cloned" data-slick-index={-4} aria-hidden="true" tabIndex={-1}>
-                    <img className="blur-up lazyload" src="assets/images/product-detail-page/camelia-reversible0.jpg" alt="" />
-                  </a>
-                  <a data-image={img2} data-zoom-image={img2} className="slick-slide slick-cloned" data-slick-index={-3} aria-hidden="true" tabIndex={-1}>
-                    <img className="blur-up lazyload" src="assets/images/product-detail-page/camelia-reversible.jpg" alt="" />
-                  </a>
-                  <a data-image={img3}data-zoom-image={img3} className="slick-slide slick-cloned" data-slick-index={-2} aria-hidden="true" tabIndex={-1}>
-                    <img className="blur-up lazyload" src={img6} alt="" />
-                  </a>
-                  <a data-image={img7}data-zoom-image={img7} className="slick-slide slick-cloned" data-slick-index={-1} aria-hidden="true" tabIndex={-1}>
-                    <img className="blur-up lazyload" src={img7} alt="" />
-                  </a>
-                  <a data-image={img4}data-zoom-image={img4} className="slick-slide slick-cloned" data-slick-index={0} aria-hidden="true" tabIndex={-1}>
-                    <img className="blur-up lazyload" src={img8}alt="" />
-                  </a>
-                  <a data-image={img5} data-zoom-image={img5} className="slick-slide slick-cloned" data-slick-index={1} aria-hidden="true" tabIndex={-1}>
-                    <img className="blur-up lazyload" src={img9} alt="" />
-                  </a>
-                  <a data-image={img6}data-zoom-image={img6} className="slick-slide slick-cloned" data-slick-index={2} aria-hidden="true" tabIndex={-1}>
-                    <img className="blur-up lazyload" src="assets/images/product-detail-page/camelia-reversible1.jpg" alt="" />
-                  </a>
-                  <a data-image={img7}data-zoom-image={img7} className="slick-slide slick-cloned" data-slick-index={3} aria-hidden="true" tabIndex={-1}>
-                    <img className="blur-up lazyload" src="assets/images/product-detail-page/camelia-reversible2.jpg" alt="" />
-                  </a>
-                  <a data-image={img8} data-zoom-image={img8} className="slick-slide slick-cloned" data-slick-index={4} aria-hidden="true" tabIndex={-1}>
-                    <img className="blur-up lazyload" src="assets/images/product-detail-page/camelia-reversible3.jpg" alt="" />
-                  </a>
-                  <a data-image={img9} data-zoom-image="assets/images/product-detail-page/camelia-reversible-big9.jpg" className="slick-slide slick-cloned" data-slick-index={5} aria-hidden="true" tabIndex={-1}>
-                    <img className="blur-up lazyload" src="assets/images/product-detail-page/camelia-reversible4.jpg" alt="" />
-                  </a>
-                  <a data-image={img10}data-zoom-image="assets/images/product-detail-page/camelia-reversible-big10.jpg" className="slick-slide slick-cloned" data-slick-index={6} aria-hidden="true" tabIndex={-1}>
-                    <img className="blur-up lazyload" src="assets/images/product-detail-page/camelia-reversible5.jpg" alt="" />
-                  </a>
-                </div>
+               <div id="gallery" className="product-dec-slider-2 product-tab-left">
+               <ProductLeftSlider/>
+               </div>
               </div>
               <div className="zoompro-wrap product-zoom-right pl-20">
                 <div className="zoompro-span">

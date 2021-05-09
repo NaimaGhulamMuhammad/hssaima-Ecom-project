@@ -15,12 +15,14 @@
 	<!-- Main Style CSS -->
 	<link rel="stylesheet" href="assets/css/style.css">
 	<link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="node_modules/react-star-rating/dist/css/react-star-rating.min.css">
+
 
 	<title>Belle Multipurpose Bootstrap 4 Html Template</title>
 
 </head>
 
-<body class="template-index home15-funiture-template belle">
+<body class="template-index home8-jewellery belle">
 	<div id="pre-loader" >
 			<img src="assets/images/loader.gif" alt="Loading..." />
       </div>
@@ -67,9 +69,53 @@
     <script src="assets/js/popper.min.js"></script>
      <script src="assets/js/bootstrap.min.js"></script>
      <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/main.js"></script>
      <script src="assets/js/lazysizes.js"></script>
-     <script src="assets/js/main.js"></script>
-     <!--For Newsletter Popup-->
+        <!-- Photoswipe Gallery -->
+     <script src="assets/js/vendor/photoswipe.min.js"></script>
+     <script src="assets/js/vendor/photoswipe-ui-default.min.js"></script>
+      <script>
+        $(function(){
+            var $pswp = $('.pswp')[0],
+                image = [],
+                getItems = function() {
+                    var items = [];
+                    $('.lightboximages a').each(function() {
+                        var $href   = $(this).attr('href'),
+                            $size   = $(this).data('size').split('x'),
+                            item = {
+                                src : $href,
+                                w: $size[0],
+                                h: $size[1]
+                            }
+                            items.push(item);
+                    });
+                    return items;
+                }
+            var items = getItems();
+        
+            $.each(items, function(index, value) {
+                image[index]     = new Image();
+                image[index].src = value['src'];
+            });
+            $('.prlightbox').on('click', function (event) {
+                event.preventDefault();
+              
+                var $index = $(".active-thumb").parent().attr('data-slick-index');
+                $index++;
+                $index = $index-1;
+        
+                var options = {
+                    index: $index,
+                    bgOpacity: 0.9,
+                    showHideOpacity: true
+                }
+                var lightBox = new PhotoSwipe($pswp, PhotoSwipeUI_Default, items, options);
+                lightBox.init();
+            });
+        });
+        </script>
+<!--For Newsletter Popup-->
      <!-- <script>
 		jQuery(document).ready(function(){  
 		  jQuery('.closepopup').on('click', function () {
@@ -103,9 +149,9 @@
 		  }
 		});
 		 -->
-		/*--------------------------------------
+		<!-- /*--------------------------------------
 			Promotion / Notification Cookie Bar 
-		  -------------------------------------- */
+		  -------------------------------------- */ -->
 		  <!-- if(Cookies.get('promotion') != 'true') {   
 			 $(".notification-bar").show();         
 		  }
@@ -118,6 +164,6 @@
     <!--End For Newsletter Popup--> 
 
     </div>
-    
+
   </body>
 </html>

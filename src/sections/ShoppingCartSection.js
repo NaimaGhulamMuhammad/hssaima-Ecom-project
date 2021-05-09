@@ -1,6 +1,6 @@
 import React from "react"
 import {Link} from "react-router-dom"
-import CartComponent from "../components/CartComponent";
+import CartCard from "../components/CartCard";
 import { CartData } from "../data/CartData";
 
 const ShoppingCartSection = () => {
@@ -28,7 +28,7 @@ const ShoppingCartSection = () => {
                             {CartData.map((cartData, key) => {
                                 const {productName, productImg, size, color, price, total} = cartData
                                 return (
-                                    <CartComponent key={key} productImg={productImg} productName={productName}
+                                    <CartCard key={key} productImg={productImg} productName={productName}
                                     size={size} color={color} price={price} total={total} />
                                 );
                             })}

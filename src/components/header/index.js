@@ -8,6 +8,7 @@ const Header = () => {
     <div className="header-wrap animated d-flex home15-funiture-header">
     	<div className="container-fluid">        
         <div className="row align-items-center">
+
           <div className="col-3 col-sm-3 col-md-3 col-lg-8 d-block d-lg-none">
             <button type="button" className="btn--link site-header__menu js-mobile-nav-toggle mobile-nav--open">
               <i className="icon anm anm-times-l"></i>
